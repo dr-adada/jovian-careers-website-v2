@@ -11,24 +11,33 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
         
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class='img-fluid' id="banner" src="https://jovian-careers-website.abdulrahim88.repl.co/static/banner.jpg">
     <div class='container'>
    <h1 class='text-center mt-2 mb-4'>Jovian Careers</h1>
-    <img class='img-fluid' id="banner" src="https://jovian-careers-website.abdulrahim88.repl.co/static/banner.jpg">
-    <h2 class='text-center mt-2 mb-4'>About Jovian</h2>
-    <p class='lead'>Vivamus fringilla augue in erat efficitur posuere. Vestibulum eget augue aliquam, ultricies lacus non, elementum dolor. Fusce id ante at mauris facilisis venenatis et ac purus. Vestibulum vitae ultrices nibh. Morbi vestibulum at sapien vitae dignissim. Fusce vel maximus augue. Pellentesque convallis eros sit amet condimentum blandit. Aenean massa est, imperdiet ac est eget, blandit ornare est. Etiam porttitor viverra elit, et elementum est facilisis sodales. Quisque blandit dignissim aliquam. Phasellus vitae lacinia tortor. Nulla non lorem iaculis, efficitur diam ut, imperdiet ligula. Integer in ultricies diam, in fermentum velit. Pellentesque eros sem, ullamcorper eget massa at, porttitor maximus justo. Suspendisse pulvinar nulla et odio lacinia elementum.</p>
+  <div class='row' style='margin-bottom: 16px;'>
+    <div class='col-md-6'>
+    <p class='lead' style='text-align: justify;'>Vivamus fringilla augue in erat efficitur posuere. Vestibulum eget augue aliquam, ultricies lacus non, elementum dolor. Fusce id ante at mauris facilisis venenatis et ac purus. Vestibulum vitae ultrices nibh. Morbi vestibulum at sapien vitae dignissim. Fusce vel maximus augue. Pellentesque convallis eros sit amet condimentum blandit. Aenean massa est, imperdiet ac est eget, blandit ornare est. Etiam porttitor viverra elit, et elementum est facilisis sodales. Quisque blandit dignissim aliquam. Phasellus vitae lacinia tortor. Nulla non lorem iaculis, efficitur diam ut, imperdiet ligula. Integer in ultricies diam, in fermentum velit. Pellentesque eros sem, ullamcorper eget massa at, porttitor maximus justo. Suspendisse pulvinar nulla et odio lacinia elementum.</p>
+    </div>
+    <div class='d-none d-md-block col-md-6'>
+    <img src='/static/background.jpg' style='height: 320px; border-radius: 4px;'>
+    </div>
+    </div>
     <h2 class='text-center mt-2 mb-4'>Open Positions</h2>
     <div>
       {% for job in jobs %}
       {% include 'jobitem.html' %}
       {% endfor %}
     <div style="text-align: center;">
-      <button type="button" class="btn btn-primary">Contact Us</button>
-      <p class='mt-4'>Copyright 2023, Jovian</p>
+      <a 
+target="_blank" href='mailto:mailto:adada.theseeker@gmail.com?subject=Question%20about%20Job%20Openings&body=My%20Name%3A%20%3CType%20your%20name%3E%0D%0A%0D%0AMy%20Question%3A%20%3Ctype%20your%20question%3E%0D%0A%0D%0A' type="button" class="btn btn-primary">Contact Us</a>
     </div>
   </body>
+  {% include 'footer.html' %}
 </html>
