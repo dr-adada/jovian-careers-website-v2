@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{company_name}} Careers</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://jovian-careers-website.abdulrahim88.repl.co/static/favicon.ico" rel="icon" type="image/x-icon" />
-    <style>
-      #banner {
-        height: 360px;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 16px;
-        
-      }
-    </style>
+    {% include "bootstrap.html" %}
+    <title>{{company_name}} Careers</title>  
   </head>
+  
   <body>
     {% include 'nav.html' %}
-    <img class='img-fluid' id="banner" src="https://jovian-careers-website.abdulrahim88.repl.co/static/banner.jpg">
-    <div class='container'>
+
+    {% include "banner.html" %}
+  <div class='container'>
    <h1 class='text-center mt-2 mb-4'>Jovian Careers</h1>
-  <div class='row' style='margin-bottom: 16px;'>
+    <div class='row' style='margin-bottom: 16px;'>
     <div class='col-md-6'>
     <p class='lead' style='text-align: justify;'>Vivamus fringilla augue in erat efficitur posuere. Vestibulum eget augue aliquam, ultricies lacus non, elementum dolor. Fusce id ante at mauris facilisis venenatis et ac purus. Vestibulum vitae ultrices nibh. Morbi vestibulum at sapien vitae dignissim. Fusce vel maximus augue. Pellentesque convallis eros sit amet condimentum blandit. Aenean massa est, imperdiet ac est eget, blandit ornare est. Etiam porttitor viverra elit, et elementum est facilisis sodales. Quisque blandit dignissim aliquam. Phasellus vitae lacinia tortor. Nulla non lorem iaculis, efficitur diam ut, imperdiet ligula. Integer in ultricies diam, in fermentum velit. Pellentesque eros sem, ullamcorper eget massa at, porttitor maximus justo. Suspendisse pulvinar nulla et odio lacinia elementum.</p>
     </div>
