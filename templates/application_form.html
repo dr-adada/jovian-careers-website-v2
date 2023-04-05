@@ -2,17 +2,17 @@
 <form action='/job/{{job.id}}/apply' method='post'>
   <div class='mb-2'>
   <label>Full Name</label><br>
-  <input type='text' name='full_name' placeholder='John Covey'>
+  <input type='text' required name='full_name' placeholder='John Covey'>
   </div>
 
   <div class='mb-2'>
   <label>Email</label><br>
-  <input type='text' name='email' placeholder='john@covey.com'>
+  <input type='email' required name='email' placeholder='john@covey.com'>
   </div>
 
   <div class='mb-2'>
   <label>LinkedIn URL</label><br>
-  <input type='text' name='linkedin_url'           placeholder='https://linkedin.com/gh/john-covey'>
+  <input type='url' name='linkedin_url'           placeholder='https://linkedin.com/gh/john-covey'>
   </div>
 
   <div class='mb-2'>
@@ -27,8 +27,16 @@
 
   <div class='mb-2'>
   <label>Resume URL</label><br>
-  <input type='text' name='resume_url'>
+  <input type='url' name='resume_url'>
   </div>
-  
+  <form method="POST">
+    <div class="h-captcha" data-sitekey="b6ef0162-6942-4d72-84c1-27f9334db145">
+    </div>
+    <script src="https://js.hcaptcha.com/1/api.js"     async defer>
+    </script>
+  </form>
+  <div class='mb-2'>
+    {{ hcaptcha }}
+  </div>
   <input type='submit'>
 </form>
